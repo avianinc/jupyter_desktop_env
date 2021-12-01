@@ -33,6 +33,12 @@ conda install git nodejs jupyterlab-drawio -y && pip install jupyterlab==3.0.17 
 ### SoS Enviroment (https://vatlab.github.io/sos-docs/index.html#content) see also [#3](/../../issues/3)
 Basic build:<br>
 ```
+conda update conda -y && conda install -c conda-forge -y mamba && mamba install -c conda-forge -y git nodejs wxyz_core wxyz_lab ipydrawio ipydrawio-export sos sos-pbs sos-notebook jupyterlab-sos sos-papermill sos-r sos-python jupyter-sysml-kernel jupyterlab-git jupyter_kernel_gateway jupyterlab-code-snippets && pip install jupyter-contrib-core jupyter-contrib-nbextensions calysto_bash && jupyter lab build
+```
+
+
+Advanced build w/Scilab + Octive kenrels:<br>
+```
 conda update conda -y && conda install -c conda-forge -y mamba && mamba install -c conda-forge -y git nodejs wxyz_core wxyz_lab ipydrawio ipydrawio-export sos sos-pbs sos-notebook jupyterlab-sos sos-papermill sos-r sos-python octave_kernel jupyter-sysml-kernel jupyterlab-git jupyter_kernel_gateway jupyterlab-code-snippets && pip install jupyter-contrib-core jupyter-contrib-nbextensions calysto_bash scilab_kernel && jupyter lab build
 ```
 
