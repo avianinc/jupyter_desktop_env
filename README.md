@@ -18,7 +18,7 @@ Install Anaconda from here --> `https://repo.anaconda.com/archive/Anaconda3-2021
 ### Elyra base enviroment (https://elyra.readthedocs.io/en/latest/getting_started/overview.html) see also [#1](/../../issues/1),[#2](/../../issues/2)
 This installs the base Elyra 3.2.X enviroment for testing
 - Select `Environments` on the left (just below `Home`)
-- Press `+Create` to create a new enviroment and give it a name (like `elyra_base`), press `Create' (leave python as default value, click to add R, R is not neecessary but since elyra has builtin to use it nice to have.... adding R takes a while...)
+- Press `+Create` to create a new enviroment and give it a name (like `elyra_base`), press `Create' (leave python as default value, R is not neecessary)
 - Once the enviroment is built press select it in the list and click the green circle with the right facing arrow and click `Open Terminal`
 - In the new terminal enter the following command: 
 ```
