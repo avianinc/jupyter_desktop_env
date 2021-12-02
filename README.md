@@ -22,7 +22,7 @@ This installs the base Elyra 3.2.X enviroment for testing
 - Once the enviroment is built press select it in the list and click the green circle with the right facing arrow and click `Open Terminal`
 - In the new terminal enter the following command: 
 ```
-conda install git nodejs ipydrawio -y && pip install jupyterlab==3.0.17 elyra --user && jupyter lab build
+conda install git nodejs -y && conda install -y -c conda-forge ipydrawio -y && pip install jupyterlab==3.0.17 elyra --user && jupyter lab build
 ```
 
 - Sit back and relax (with a beer if its after hours...) it will take about 20-30 minutes to build the installation
