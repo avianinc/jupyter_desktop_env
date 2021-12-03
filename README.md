@@ -18,11 +18,11 @@ Install Anaconda from here --> `https://repo.anaconda.com/archive/Anaconda3-2021
 ### Elyra base enviroment (https://elyra.readthedocs.io/en/latest/getting_started/overview.html) see also [#1](/../../issues/1),[#2](/../../issues/2)
 This installs the base Elyra 3.2.X enviroment for testing
 - Select `Environments` on the left (just below `Home`)
-- Press `+Create` to create a new enviroment and give it a name (like `elyra_base`), press `Create' (leave python as default value, R is not neecessary)
+- Press `+Create` to create a new enviroment and give it a name (like `elyra_base`), press `Create' (leave python as default value, R is neecessary so install it)
 - Once the enviroment is built press select it in the list and click the green circle with the right facing arrow and click `Open Terminal`
 - In the new terminal enter the following command: 
 ```
-conda install git nodejs -y && pip install jupyterlab==3.0.17 elyra && jupyter lab build
+conda install mamba -c conda-forge -y && mamba install git nodejs -y && mamba install -c conda-forge elyra[all] -y && jupyter lab build
 ```
 
 - Sit back and relax (with a beer if its after hours...) it will take about 20-30 minutes to build the installation
