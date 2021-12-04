@@ -14,6 +14,7 @@ Install Anaconda from here --> `https://repo.anaconda.com/archive/Anaconda3-2021
   - Click `File --> Preferences` in the upper left
   - Uncheck the `Enable SSL verification' box and click apply
   Note: can also be performed in the conda env --> `conda config --set ssl_verify false`.
+- Install mamba in the base enviroment --> (base)>conda install mamba -c conda-forge
 
 ### Elyra base enviroment (https://elyra.readthedocs.io/en/latest/getting_started/overview.html) see also [#1](/../../issues/1),[#2](/../../issues/2)
 This installs the base Elyra 3.2.X enviroment for testing
@@ -22,7 +23,7 @@ This installs the base Elyra 3.2.X enviroment for testing
 - Once the enviroment is built press select it in the list and click the green circle with the right facing arrow and click `Open Terminal`
 - In the new terminal enter the following command: 
 ```
-conda install mamba -c conda-forge -y && mamba install git nodejs -y && mamba install -c conda-forge elyra[all] -y && jupyter lab build
+mamba install -c conda-forge git nodejs elyra[all]openmdao[all] -y && jupyter lab build
 ```
 
 - Sit back and relax (with a beer if its after hours...) it will take about 20-30 minutes to build the installation
@@ -33,13 +34,13 @@ conda install mamba -c conda-forge -y && mamba install git nodejs -y && mamba in
 ### SoS Enviroment (https://vatlab.github.io/sos-docs/index.html#content) see also [#3](/../../issues/3)
 Basic build:<br>
 ```
-conda update conda -y && conda install -c conda-forge -y mamba && mamba install -c conda-forge -y git nodejs wxyz_core wxyz_lab ipydrawio ipydrawio-export sos sos-pbs sos-notebook jupyterlab-sos sos-papermill sos-r sos-python jupyter-sysml-kernel jupyterlab-git jupyter_kernel_gateway jupyterlab-code-snippets && pip install jupyter-contrib-core jupyter-contrib-nbextensions calysto_bash && jupyter lab build
+mamba install -c conda-forge -y git nodejs wxyz_core wxyz_lab ipydrawio ipydrawio-export sos sos-pbs sos-notebook jupyterlab-sos sos-papermill sos-r sos-python jupyter-sysml-kernel jupyterlab-git jupyter_kernel_gateway jupyterlab-code-snippets && pip install jupyter-contrib-core jupyter-contrib-nbextensions calysto_bash && jupyter lab build
 ```
 
 
 Advanced build w/Scilab + Octive kenrels:<br>
 ```
-conda update conda -y && conda install -c conda-forge -y mamba && mamba install -c conda-forge -y git nodejs wxyz_core wxyz_lab ipydrawio ipydrawio-export sos sos-pbs sos-notebook jupyterlab-sos sos-papermill sos-r sos-python octave_kernel jupyter-sysml-kernel jupyterlab-git jupyter_kernel_gateway jupyterlab-code-snippets && pip install jupyter-contrib-core jupyter-contrib-nbextensions calysto_bash scilab_kernel && jupyter labextension install @j123npm/qgrid2@1.1.4 && jupyter lab build 
+mamba install -c conda-forge -y git nodejs wxyz_core wxyz_lab ipydrawio ipydrawio-export sos sos-pbs sos-notebook jupyterlab-sos sos-papermill sos-r sos-python octave_kernel jupyter-sysml-kernel jupyterlab-git jupyter_kernel_gateway jupyterlab-code-snippets && pip install jupyter-contrib-core jupyter-contrib-nbextensions calysto_bash scilab_kernel && jupyter labextension install @j123npm/qgrid2@1.1.4 && jupyter lab build 
 ```
 
 
