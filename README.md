@@ -14,18 +14,17 @@ Install Anaconda from here --> `https://repo.anaconda.com/archive/Anaconda3-2021
   - Click `File --> Preferences` in the upper left
   - Uncheck the `Enable SSL verification' box and click apply
   Note: can also be performed in the conda env --> `conda config --set ssl_verify false`.
-- Install mamba in the base enviroment --> (base)>conda install mamba -c conda-forge
+- Install mamba in the base enviroment --> ```(base)>conda install mamba -c conda-forge -y``` see [#9](/../../issues/9)
 
 ### Elyra base enviroment (https://elyra.readthedocs.io/en/latest/getting_started/overview.html) see also [#1](/../../issues/1),[#2](/../../issues/2)
-This installs the base Elyra 3.2.X enviroment for testing
+This installs the base Elyra 2.2.X enviroment for testing
 - Select `Environments` on the left (just below `Home`)
-- Press `+Create` to create a new enviroment and give it a name (like `elyra_base`), press `Create' (leave python as default value, R is neecessary so install it)
+- Press `+Create` to create a new enviroment and give it a name (like `elyra_base`), press `Create' (leave python as 3.8.12, R is neecessary so install 3.6.1)
 - Once the enviroment is built press select it in the list and click the green circle with the right facing arrow and click `Open Terminal`
 - In the new terminal enter the following command: 
 ```
 mamba install -c conda-forge git nodejs elyra[all] openmdao[all] -y && jupyter lab build
 ```
-
 - Sit back and relax (with a beer if its after hours...) it will take about 20-30 minutes to build the installation
 - Once complete run `jupyter lab` at the cmd prompt to enjoy elyra...
 - See here for more information on elyra --> https://elyra.readthedocs.io/en/latest/index.html
@@ -58,5 +57,3 @@ Install Scilab from here --> https://www.scilab.org/download/6.1.1/scilab-6.1.1_
   - Variable Name: `SCILAB_EXECUTABLE`
   - Variable value: (Location of the octave-cli.exe) `C:\Users\jdehart\AppData\Local\scilab-6.1.1\bin\WScilex-cli.exe`<br>
 ---------------------------------------------------------------------------------------
-
-
